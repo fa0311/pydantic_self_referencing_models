@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 class ModelA(BaseModel):
     a: Optional["ModelA"]
-    b: Optional["ModelB"]
+    b: Optional[ModelB]
 
     @classmethod
     def from_dict(cls, obj: dict) -> "ModelA":
